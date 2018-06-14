@@ -1,0 +1,222 @@
+.upload_btn {
+    color: #333333;
+    border-radius: 5px;
+    font-size: 14px;
+    position: absolute;
+    background: white;
+    padding: 2px;
+}
+.jcrop-holder{direction:ltr;text-align:left;}
+.jcrop-vline,.jcrop-hline{background:#FFF url(Jcrop.gif);font-size:0;position:absolute;}
+.jcrop-vline{height:100%;width:1px!important;}
+.jcrop-vline.right{right:0;}
+.jcrop-hline{height:1px!important;width:100%;}
+.jcrop-hline.bottom{bottom:0;}
+.jcrop-tracker{-webkit-tap-highlight-color:transparent;-webkit-touch-callout:none;-webkit-user-select:none;height:100%;width:100%;}
+.jcrop-handle{background-color:#333;border:1px #EEE solid;font-size:1px;height:7px;width:7px;}
+.jcrop-handle.ord-n{left:50%;margin-left:-4px;margin-top:-4px;top:0;}
+.jcrop-handle.ord-s{bottom:0;left:50%;margin-bottom:-4px;margin-left:-4px;}
+.jcrop-handle.ord-e{margin-right:-4px;margin-top:-4px;right:0;top:50%;}
+.jcrop-handle.ord-w{left:0;margin-left:-4px;margin-top:-4px;top:50%;}
+.jcrop-handle.ord-nw{left:0;margin-left:-4px;margin-top:-4px;top:0;}
+.jcrop-handle.ord-ne{margin-right:-4px;margin-top:-4px;right:0;top:0;}
+.jcrop-handle.ord-se{bottom:0;margin-bottom:-4px;margin-right:-4px;right:0;}
+.jcrop-handle.ord-sw{bottom:0;left:0;margin-bottom:-4px;margin-left:-4px;}
+.jcrop-dragbar.ord-n,.jcrop-dragbar.ord-s{height:7px;width:100%;}
+.jcrop-dragbar.ord-e,.jcrop-dragbar.ord-w{height:100%;width:7px;}
+.jcrop-dragbar.ord-n{margin-top:-4px;}
+.jcrop-dragbar.ord-s{bottom:0;margin-bottom:-4px;}
+.jcrop-dragbar.ord-e{margin-right:-4px;right:0;}
+.jcrop-dragbar.ord-w{margin-left:-4px;}
+.jcrop-light .jcrop-vline,.jcrop-light .jcrop-hline{background:#FFF;filter:alpha(opacity=70)!important;opacity:.70!important;}
+.jcrop-light .jcrop-handle{-moz-border-radius:3px;-webkit-border-radius:3px;background-color:#000;border-color:#FFF;border-radius:3px;}
+.jcrop-dark .jcrop-vline,.jcrop-dark .jcrop-hline{background:#000;filter:alpha(opacity=70)!important;opacity:.7!important;}
+.jcrop-dark .jcrop-handle{-moz-border-radius:3px;-webkit-border-radius:3px;background-color:#FFF;border-color:#000;border-radius:3px;}
+.solid-line .jcrop-vline,.solid-line .jcrop-hline{background:#FFF;}
+.jcrop-holder img,img.jcrop-preview{max-width:none;}
+/* popup --------------------------*/
+#popup_upload,
+#popup_crop {
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	background: rgba(0, 0 ,0, 0.7);
+	z-index: 99;
+	text-align: center;
+	display: none;
+	overflow: auto;
+}
+.form_upload {
+	width: 300px;
+	height: 140px;
+	border: 1px solid #999999;
+	border-radius: 10px;
+	background: #ffffff;
+	color: #666666;
+	margin: auto;
+	margin-top: 160px;
+	padding: 10px;
+	text-align: left;
+	position: relative;
+}
+.form_upload h2 {
+	border-bottom: 1px solid #999999;
+	padding: 0 0 5px 0;
+	margin: 0 0 20px 0;
+}
+.upload_frame {
+	width: 0;
+	height: 0;
+	display: none;
+}
+.file_input {
+	width: 97%;
+	background: #eaeaea;
+	border: 1px solid #999999;
+	border-radius: 5px;
+	color: #333333;
+	padding: 1%;
+	margin: 0 0 20px 0;
+}
+#upload_btn {
+margin: 0 auto;
+    display: -webkit-box;
+}
+#upload_btn:hover {
+	background: #eaeaea;
+}
+.close {
+    position: absolute;
+    display: block;
+    right: 10px;
+    cursor: pointer;
+    font-size: 20px;
+    line-height: 16px;
+    width: 18px;
+    height: 18px;
+    border: 1px solid #cccccc;
+    border-radius: 5px;
+    background: #F0F0F0;
+    text-align: center;
+    font-weight: bold;
+}
+.close:hover {
+    background: #cccccc;
+}
+#loading_progress {
+    float: left;
+    line-height: 18px;
+    padding: 8px 0 0 0;
+}
+#loading_progress img {
+    float: left;
+    margin: 0 5px 0 0;
+    width: 16px !important;
+}
+.form_crop {
+    display: inline-block;
+    border-radius: 5px;
+    background: #ffffff;
+    margin-top: 40px;
+    padding: 5px;
+}
+.form_crop h2 {
+	border-bottom: 1px solid #999999;
+	padding: 0 0 5px 0;
+	margin: 0 0 20px 0;
+}
+#target {
+	background-color: #ccc;
+	width: 500px;
+	height: 330px;
+	font-size: 24px;
+	display: block;
+}
+#crop_btn {
+	    background: #cccccc;
+    color: #333333;
+    border: 1px solid #999999;
+    font-weight: bold;
+    display: block;
+    padding: 4px;
+    margin: 10px auto;
+    cursor: pointer;
+}
+#crop_btn:hover {
+	background: #eaeaea;
+}
+
+
+#photo_container{padding:0 0 0 0 !important;}
+#photo_container img {
+    /* width: 100%; */
+    margin: 0 auto;
+    display: -webkit-box;}
+
+    ._30v- {
+   background-clip: padding-box;
+    background-color: #000;
+    border: 1px solid #fff;
+    border-color: rgba(255, 255, 255, .8);
+    border-radius: 2px;
+    box-shadow: 0 0 6px rgba(0, 0, 0, .6);
+    box-sizing: border-box;
+    color: #fff;
+    display: inline-block;
+    opacity: 0;
+    overflow: hidden;
+    padding: 6px 10px;
+    position: relative;
+    top: -5px;
+    transition: opacity .3s cubic-bezier(.175, .885, .32, 1.275), width .3s step-end;
+    white-space: nowrap;
+    width: 34px;
+    word-wrap: normal;
+}
+a._p {
+    display: block;
+}
+._30vy {
+    height: 25px;
+    position: relative;
+}._30vx {
+    left: 20px;
+    position: absolute;
+    top: 15px;
+}.sp_lvIBUc43gUr.sx_2ce4ab {
+    width: 30px;
+    height: 25px;    margin-left: 5px;
+}
+i.img {
+    -ms-high-contrast-adjust: none;
+    _overflow: hidden;
+}
+.sp_lvIBUc43gUr {
+       background-image: url(../img/camera.png);
+    background-size: auto;
+    background-repeat: no-repeat;
+    display: inline-block;
+    position: absolute;
+    z-index: 9;
+}._30w0 {
+    -webkit-font-smoothing: antialiased;
+    padding-left: 26px;
+    position: relative;
+    top: 1px;font-weight: bold;
+    z-index: 2;
+}._30vy:hover ._30v-, ._30vy:focus ._30v-, ._30vx.openToggler ._30v-, ._30v_ ._30v-, ._3y4k ._30v-, .coverImage:hover ._5pwk ._30v- {
+    opacity: .8;
+    width: 100%;
+}
+._30vy:hover ._30v-, ._30vy:focus ._30v-, .coverImage:hover ._5pwk ._30v- {
+    transition: opacity .3s cubic-bezier(.175, .885, .32, 1.275), width .3s step-start;
+}form.uploadpic {
+    padding-top: 25px;
+}.change-btn {
+    right: 0;
+    float: right;
+    bottom: 0;
+    margin: 10px;
+}

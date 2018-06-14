@@ -1,0 +1,13 @@
+<IfModule mod_rewrite.c>
+RewriteEngine on
+RewriteBase /admin/
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)$ index.php?_route_=$1 [NC,L,QSA]
+</IfModule>
+<IfModule mod_php5.c>
+php_value post_max_size 500M
+php_value upload_max_filesize 500M
+php_value memory_limit 128M
+php_value max_execution_time 300
+</IfModule>
